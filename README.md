@@ -2,7 +2,7 @@
 
 ## Getting Project and Docker
 - git clone https://github.com/Jagalite/GoHTTP.git
-- sudo apt-get docker.io
+- sudo apt-get install docker.io
 
 ## AWS - Allow HTTP
 - Go to the "Network & Security" -> Security Group settings in the left hand navigation
