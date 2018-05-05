@@ -3,7 +3,6 @@ package main
 import (
 	"io"
 	"net/http"
-	"fmt"
 )
 
 func hello(w http.ResponseWriter, r *http.Request) {
@@ -11,6 +10,8 @@ func hello(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/", hello)
+	//http.HandleFunc("/", hello)
+	fs := http.FileServer(http.Dir("/"))
+	http.Handle("/", fs)
 	http.ListenAndServe(":1337", nil)
 }
